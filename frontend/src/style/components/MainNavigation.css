@@ -1,0 +1,272 @@
+.d-flex-c {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: initial;
+}
+
+.main-nav {
+  border-bottom: 1px solid #9ca19c;
+  height: 5rem;
+  padding: 0.5% 50px;
+  background-image: inherit;
+  background-color: #202020;
+  color: aliceblue;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  width: 25rem;
+  text-align: center;
+  align-items: center;
+}
+
+.logo > a {
+  display: flex;
+  flex-direction: row;
+
+  text-align: center;
+  align-items: center;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.logo-text {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+.logo-text > p {
+  margin-top: -1rem;
+}
+
+.menu {
+  width: 75%;
+  justify-content: end;
+}
+
+.menu-list {
+  padding: 0;
+  list-style-type: none;
+  top: 50%;
+  transform: translateY(25%);
+  margin-left: 1rem;
+}
+
+.menu-item {
+  min-width: fit-content;
+  width: 7rem;
+  height: 2.4rem;
+  padding: 1%;
+  margin-right: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.menu-item:hover {
+  border: none;
+  box-shadow: 0 0 100px #eee;
+  background-image: linear-gradient(
+    to right,
+    #093028 0%,
+    #122f23 51%,
+    #09211c 100%
+  );
+}
+
+.search-menu {
+  width: min-content;
+}
+
+.custom-message {
+  width: 100%;
+  display: none;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: #2a30092f;
+  height: 5rem;
+  opacity: 0;
+  transition: linear 1s;
+}
+
+.error {
+  display: flex;
+  background-color: #ff9494;
+  color: #202020;
+  opacity: 1;
+}
+
+.confirm {
+  display: flex;
+  background-color: #198754;
+  color: aliceblue;
+  opacity: 1;
+}
+
+.loading {
+  display: flex;
+  background-color: #eed202;
+  color: #202020;
+  opacity: 1;
+}
+
+.search {
+  display: block;
+  width: 25px;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 0 0 0 1.7rem;
+  background-image: url("../img/serach.png");
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.6s ease-in-out;
+  transition: width 0.6s ease-in-out;
+  background-position: 3%;
+  border: none;
+}
+
+.search:hover,
+.search:focus {
+  background-image: url("../img/serach_b.png");
+  width: 12rem;
+  border: 2px solid aliceblue;
+  border-radius: 15px;
+  outline: aliceblue;
+  background-color: aliceblue;
+  box-shadow: 0 0 150px #eee;
+}
+
+.search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.connect-wallet-btn {
+  margin-left: 1rem;
+}
+
+.nav-dropdown-menu {
+  background-color: transparent;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  width: 3rem;
+  color: aliceblue;
+  font-size: 2rem;
+  display: none;
+}
+
+.nav-dropdown-menu:hover {
+  border-color: aliceblue;
+}
+
+.dp-option {
+  display: flex;
+}
+
+.menu-item > a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.search-options {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  min-width: 12rem;
+  max-width: 20rem;
+  min-height: fit-content;
+  background-color: #202020;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+  color: aliceblue;
+}
+.search-options > a {
+  text-decoration: none;
+  color: aliceblue;
+  margin-bottom: 0.2rem;
+  border-bottom: 1px solid aliceblue;
+  width: 100%;
+  text-align: center;
+}
+
+.search-options > a:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1200px) {
+  .main-nav {
+    padding: 0.5% 5px;
+  }
+
+  .logo {
+    width: 75%;
+    max-width: 20rem;
+  }
+
+  .logo-text > p {
+    font-size: 0.7rem;
+  }
+  .logo-text > h1 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .menu-area {
+    text-align: center;
+    height: 18rem;
+    width: 100%;
+    background-color: #202020;
+  }
+
+  .dp-option {
+    display: none;
+  }
+
+  .nav-dropdown-menu {
+    display: inline;
+    color: aliceblue;
+    position: absolute;
+    right: 6%;
+    top: 0.8rem;
+  }
+
+  .nav-dropdown-menu:hover {
+    color: #202020;
+    background-color: aliceblue;
+  }
+
+  .menu {
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    margin-top: 24rem;
+    width: 100%;
+    left: 0;
+    height: 18rem;
+    padding: 0;
+  }
+  .menu-list {
+    flex-direction: column;
+    transform: translateY(0%);
+    width: 50%;
+  }
+
+  .menu-item {
+    margin-bottom: 1rem;
+  }
+
+  .search {
+    margin-bottom: 0.5rem;
+  }
+
+  .connect-wallet-btn {
+    margin-left: -1rem;
+  }
+}
